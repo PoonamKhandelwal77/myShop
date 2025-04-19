@@ -2,10 +2,7 @@ require("../db/dbconn/connDb")
 const salesModel=require("../db/dbModel/Sale")
 
 const getAllSales=async(req,res)=>{
-   
-   
-      
-        
+           
         try {
             const allSales=await salesModel.find(req.query)
             res.status(200).send(allSales)
@@ -13,8 +10,6 @@ const getAllSales=async(req,res)=>{
             console.log(error);
             
         }
-    
-
 
 }
 
